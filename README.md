@@ -22,7 +22,7 @@ An interactive, bilingual (English & Tamil) web-based application for monitoring
 
 1. **Clone the Repository**  
 ```bash
-git clone https://github.com/your-username/water-quality-analysis-tool.git
+git clone https://github.com/samgabrielbilshan/water-quality-analysis-tool.git
 cd water-quality-analysis-tool
 ```
 
