@@ -8,7 +8,6 @@ An interactive, bilingual (English & Tamil) web-based application for monitoring
 - **Water Quality Assessment** – Instant evaluation of water safety based on pH, TDS, turbidity, hardness, chloride, and more.  
 - **Bilingual Support** – Fully functional in both **English** and **Tamil** to reach rural and underserved communities.  
 - **CSV Export** – Download test results for record-keeping or sharing with authorities.  
-- **Visualization** – Simple, clear charts and tables for easy understanding of results.  
 - **Awareness & Education** – Integrated article on the importance of clean water and safe consumption practices.  
 
 ---
