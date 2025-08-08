@@ -1,19 +1,49 @@
-# Potabl. - Water Quality Analysis Tool
+# 🚰 Community Water Quality Analysis Tool  
+
+An interactive, bilingual (English & Tamil) web-based application for monitoring and evaluating the safety of local water sources. Built with **Streamlit**, the tool compares user-provided water quality parameters with **WHO** and **BIS** standards to determine potability and provide actionable feedback.  
+
 ---
-Access to clean and safe drinking water is a fundamental requirement for human health and well-being. However, contamination from industrial discharge, agricultural runoff, and aging infrastructure continues to threaten water quality in both rural and urban areas. Traditional laboratory-based testing methods, though accurate, are often time-consuming, expensive, and inaccessible to communities with limited resources.
 
-This project introduces a Water Quality Analysis Tool—a digital platform designed to evaluate drinking water quality quickly, accurately, and in a user-friendly manner. The system enables users to input measured water parameters such as pH, turbidity, total dissolved solids (TDS), hardness, chloride content, fluoride levels, and microbial indicators, among others. These inputs are compared against the permissible limits defined by the World Health Organization (WHO) and the Bureau of Indian Standards (BIS). The tool then classifies water as Safe, Marginal, or Unsafe for drinking, providing parameter-specific alerts and recommendations for corrective measures.
+## 📜 Features  
+- **Water Quality Assessment** – Instant evaluation of water safety based on pH, TDS, turbidity, hardness, chloride, and more.  
+- **Bilingual Support** – Fully functional in both **English** and **Tamil** to reach rural and underserved communities.  
+- **CSV Export** – Download test results for record-keeping or sharing with authorities.  
+- **Visualization** – Simple, clear charts and tables for easy understanding of results.  
+- **Awareness & Education** – Integrated article on the importance of clean water and safe consumption practices.  
 
-Developed using Streamlit for an interactive and responsive web interface, the tool supports bilingual operation (English and Tamil) to ensure accessibility for diverse user groups. Its backend logic is powered by a rule-based evaluation engine, allowing for easy scalability and integration of additional parameters in the future. The solution is designed to work on desktops and mobile devices, making it usable by field workers, local authorities, NGOs, and community members.
-
-By combining scientific standards with an intuitive design, the Water Quality Analysis Tool bridges the gap between laboratory precision and on-site usability. It has the potential to improve public awareness, support timely interventions, and contribute to long-term water safety monitoring strategies. Future enhancements could include sensor integration for real-time data collection, automated reporting to authorities, and AI-based anomaly detection to predict contamination trends.
-
-Tools and Technology
 ---
-- Python - Backend logic and parameter evalutaion
-- Streamlit - For interactive and user-friendly interface
-- Pandas - CSV exporting and handling 
-- JSON - Language translation operations
+
+## 🛠 Tools & Technologies  
+- **Python** – Core programming language  
+- **Streamlit** – Web application framework  
+- **Pandas** – Data processing and CSV export  
+- **JSON** – Language translation and configuration  
+
+## 📦 Installation  
+
+1. **Clone the Repository**  
+```bash
+git clone https://github.com/your-username/water-quality-analysis-tool.git
+cd water-quality-analysis-tool
+```
+
+2. **Create a Virtual Environment (Optional but Recommended)**
+```bash
+python -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+```
+
+3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the Application
+```bash
+streamlit run Home.py
+```
+
 
 References
 ---
