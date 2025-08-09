@@ -5,11 +5,18 @@ import os
 
 st.set_page_config(layout="wide")
 
-file_path = os.path.join(os.path.dirname(__file__), "translations.json")
-with open("translations.json", "r", encoding="utf-8") as f:
+# Always load file relative to this script's location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, "translations.json")
+
+with open(file_path, "r", encoding="utf-8") as f:
     translations = json.load(f)
 
-lang = st.sidebar.selectbox("Language", options=["en", "ta"], format_func=lambda x: {"ta": "தமிழ்", "en": "English"}[x])
+lang = st.sidebar.selectbox(
+    "Language",
+    options=["en", "ta"],
+    format_func=lambda x: {"ta": "தமிழ்", "en": "English"}[x]
+)
 t = translations[lang]
 
 st.title(t["title"])
@@ -84,7 +91,6 @@ if submitted:
                     ⚠️ {t["missing_params_warning"]}  
                     👉 {", ".join(missing_values)}""")
         
-    # Count tested parameters (value != 0)
     tested_params = [param for param, value in results.items() if value != 0]
     valid_params = [param for param in tested_params if validate_input(param, results[param])]
     confidence_percent = round((len(valid_params) / len(tested_params)) * 100) if tested_params else 0
@@ -97,9 +103,6 @@ if submitted:
         st.warning(t["moderate_confidence"])
     else:
         st.error(t["low_confidence"])
-
-
-        
 
     st.subheader(t["summary_header"])
     df = pd.DataFrame({
