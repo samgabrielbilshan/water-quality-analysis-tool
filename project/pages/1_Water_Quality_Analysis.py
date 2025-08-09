@@ -34,8 +34,8 @@ def validate_input(param, value):
 with st.form("water_quality_form"):
     st.header(t["basic_header"])
     ph = st.slider("pH (6.5 – 8.5)", 0.0, 14.0, 7.0)
-    turbidity = st.number_input(f"{t["turbidity"]} (NTU, ≤ 5)", min_value=0.0)
-    tds = st.number_input(f"{t["tds"]} (mg/L, ≤ 500)", min_value=0.0)
+    turbidity = st.number_input(f"{t['turbidity']} (NTU, ≤ 5)", min_value=0.0)
+    tds = st.number_input(f"{t['tds']} (mg/L, ≤ 500)", min_value=0.0)
     ammonia = st.number_input("Ammonia (mg/L, ≤ 0.5)", min_value=0.0)
     nitrate = st.number_input("Nitrate (mg/L, ≤ 45)", min_value=0.0)
 
