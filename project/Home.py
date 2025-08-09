@@ -1,6 +1,7 @@
 import streamlit as st
 import json 
 import os
+from pathlib import Path
 
 
 # Always load file relative to this script's location
@@ -27,7 +28,7 @@ st.markdown(t.get("why_clean_content"))
 
 # Section: Global Crisis
 
-st.image("1.png")
+st.image(Path(__file__).parent / "1.png")
 
 st.header(t.get("global_crisis_header"))
 st.markdown(t.get("global_crisis_content"))
@@ -38,7 +39,7 @@ st.markdown(t.get("analysis_content"))
 
 # Section: Awareness and Education
 
-st.image("3.png")
+st.image(Path(__file__).parent / "3.png")
 
 st.header(t.get("awareness_header"))
 st.markdown(t.get("awareness_content"))
@@ -51,7 +52,7 @@ st.markdown(t.get("environmental_content"))
 
 # Section: Policy and Legal Frameworks
 
-st.image("2.png")
+st.image(Path(__file__).parent / "2.png")
 
 st.header(t.get("policy_header"))
 st.markdown(t.get("policy_content"))
