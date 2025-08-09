@@ -5,10 +5,16 @@ import os
 
 st.set_page_config(layout="wide")
 
-# Always load file relative to this script's location
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(BASE_DIR, "translations.json")
+# Get the directory where this file is located
+current_dir = os.path.dirname(__file__)
 
+# Go one level up to reach the project folder
+project_dir = os.path.abspath(os.path.join(current_dir, ".."))
+
+# Build the full path to translations.json
+file_path = os.path.join(project_dir, "translations.json")
+
+# Now load the file safely
 with open(file_path, "r", encoding="utf-8") as f:
     translations = json.load(f)
 
