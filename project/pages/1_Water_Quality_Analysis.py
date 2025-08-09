@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 import json
+import os
 
 st.set_page_config(layout="wide")
 
-
+file_path = os.path.join(os.path.dirname(__file__), "translations.json")
 with open("translations.json", "r", encoding="utf-8") as f:
     translations = json.load(f)
 
