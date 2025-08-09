@@ -1,8 +1,13 @@
 import streamlit as st
 import json 
+import os
 
-# Load translations
-with open("translations.json", "r", encoding="utf-8") as f:
+
+# Always load file relative to this script's location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, "translations.json")
+
+with open(file_path, "r", encoding="utf-8") as f:
     translations = json.load(f)
 
 lang = st.sidebar.selectbox("Language", options=['en', 'ta'], format_func=lambda x: {'ta': 'தமிழ்', 'en': 'English'}[x])
