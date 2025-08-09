@@ -2,7 +2,7 @@
 
 An interactive, bilingual (English & Tamil) web-based application for monitoring and evaluating the safety of local water sources. Built with **Streamlit**, the tool compares user-provided water quality parameters with **WHO** and **BIS** standards to determine potability and provide actionable feedback.  
 
-#CHECK IT OUT HERE - potabl.streamlit.app
+CHECK IT OUT HERE - [Potabl.](potable.streamlit.app)
 
 ---
 
